@@ -1,0 +1,831 @@
+/* Root CSS variables */
+:root {
+    --color-white: #fff;
+    --color-light: hsl(250, 23%, 95%);
+    --color-gray-light: hsl(255, 3%, 53%);
+    --color-gray-dark: hsl(247, 5%, 35%);
+    --color-dark: hsl(240, 4%, 22%);
+    --color-primary: hsl(257, 94%, 47%);
+    --color-success: hsl(120, 70%, 65%);
+    --color-danger: hsl(0, 67%, 54%);
+    --color-warning: hsl(61, 58%, 53%);
+    --color-purple: hsl(286, 90%, 65%);
+    --color-primary-light: hsl(257, 94%, 47%, 0.2);
+    --color-success-light: hsl(120, 70%, 65%, 0.2);
+    --color-danger-light: hsl(0, 67%, 54%, 0.2);
+    --color-purple-light: hsla(286, 90%, 65%, 0.2);
+
+    --card-padding: 1.6rem;
+    --padding-1: 1rem;
+    --padding-2: 8px;
+
+    --card-border-radius: 1.6rem;
+    --border-radius-1: 1rem;
+    --border-radius-2: 6px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    appearance: none;
+    border: none;
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    background: var(--color-light);
+    font-family: poppins, sans-serif;
+    min-height: 100vh;
+    color: var(--color-dark);
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.86rem;
+    font-weight: 500;
+}
+
+h6 {
+    font-size: 0.76rem;
+}
+
+.small {
+    font-weight: 300;
+    font-size: 0.77rem;
+}
+
+.text-muted {
+    color: var(--color-gray-light);
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.purple {
+    color: var(--color-purple);
+}
+
+.primary-light {
+    color: var(--color-primary-light);
+}
+
+.success-light {
+    color: var(--color-success-light);
+}
+
+.danger-light {
+    color: var(--color-danger-light);
+}
+
+.purple-light {
+    color: var(--color-purple-light);
+}
+
+.bg-primary {
+    background: var(--color-primary);
+    box-shadow: 0 0.8rem 0.8rem var(--color-primary-light);
+}
+
+.bg-danger {
+    background: var(--color-danger);
+    box-shadow: 0 0.8rem 0.8rem var(--color-danger-light);
+}
+
+.bg-success {
+    background: var(--color-success);
+    box-shadow: 0 0.8rem 0.8rem var(--color-success-light);
+}
+
+.bg-purple {
+    background: var(--color-purple);
+    box-shadow: 0 0.8rem 0.8rem var(--color-purple-light);
+}
+
+.bg-dark {
+    background: var(--color-dark);
+    box-shadow: 0 0.8rem 0.8rem hsla(0, 0%, 0%, 0.2);
+}
+
+.bg-primary-light {
+    background: var(--color-primary-light);
+}
+
+.bg-success-light {
+    background: var(--color-success-light);
+}
+
+.bg-danger-light {
+    background: var(--color-danger-light);
+}
+
+.bg-purple-light {
+    background: var(--color-purple-light);
+}
+
+/*===== NAV BAR ============= */
+
+nav {
+    width: 100%;
+    background: var(--color-white);
+    padding: 1rem 0;
+    position: relative;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 96%;
+    margin: 0 auto;
+}
+
+nav img.logo {
+    width: 7rem;
+}
+
+nav .search-bar {
+    background: var(--color-light);
+    padding: var(--padding-2) var(--card-padding);
+    width: 32vw;
+    border-radius: var(--border-radius-2);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--color-gray-light);
+    position: absolute;
+    left: 15%;
+}
+
+nav .search-bar input[type="search"] {
+    color: var(--color-dark);
+    background: transparent;
+    width: 100%;
+}
+
+nav .search-bar input[type="search"]::placeholder {
+    color: var(--color-gray-dark);
+}
+
+nav .profile-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    position: relative;
+}
+
+nav .profile-area .theme-btn {
+    display: flex;
+    background: var(--color-light);
+    width: 5rem;
+    height: 2rem;
+    border-radius: var(--border-radius-2);
+    cursor: pointer;
+}
+
+nav .profile-area .theme-btn span {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+nav .profile-area .theme-btn .active {
+    background: var(--color-dark);
+    border-radius: var(--border-radius-2);
+    color: var(--color-white);
+}
+
+nav .profile-area .profile {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+nav .profile-area .profile-photo {
+    border-radius: 50%;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+}
+
+nav .profile-area .profile-photo img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+}
+
+nav .profile-area .nav-expand {
+    display: none;
+}
+
+nav .profile .expand-more:hover {
+    cursor: pointer;
+}
+
+nav .menuOptions {
+    position: absolute;
+    z-index: 3;
+    background: var(--color-white);
+    width: 15rem;
+    top: 100%;
+    right: 0;
+    border-radius: var(--border-radius-2);
+    display: none;
+    flex-direction: column;
+    border: 2px solid var(--color-light);
+    animation: showMenuOptions 400ms ease;
+}
+
+
+nav .menuOptions .action {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+    color: var(--color-gray-dark);
+    padding: var(--padding-1);
+    border-bottom: 1px solid var(--color-white);
+    transition: all 300ms ease;
+}
+
+nav .menuOptions .action:hover {
+    background: var(--color-light);
+}
+
+@keyframes showMenuOptions {
+    from {
+        top: -20%
+    }
+    to {
+        top: 100%
+    }
+}
+
+
+/* ============ASIDE=========== */
+main {
+    display: grid;
+    grid-template-columns: 16rem auto 30rem;
+    gap: 1rem;
+    margin: 1rem auto 4rem;
+    width: 96%;
+}
+
+main aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 88vh;
+}
+
+main aside .sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    height: 4.2rem;
+    color: var(--color-gray-light);
+    position: relative;
+}
+
+main aside button#close-btn {
+    display: none;
+}
+
+main aside .sidebar a span {
+    font-size: 1.7rem;
+    margin-left: 3rem;
+    transition: all 300ms ease;
+}
+
+main aside .sidebar a.active {
+    background: var(--color-white);
+    color: var(--color-primary);
+    border-radius: var(--border-radius-1);
+}
+
+main aside .sidebar a.active::before {
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+    position: absolute;
+    border-top-left-radius: var(--border-radius-1);
+    border-bottom-left-radius: var(--border-radius-1);
+}
+
+main aside .sidebar a:hover {
+    color: var(--color-primary);
+}
+
+main .sidebar a:hover span {
+    margin-left: 2rem;
+}
+
+main .sidebar h4 {
+    font-weight: 500;
+}
+
+/* ================ updates ======== */
+main aside .updates {
+    background: var(--color-white);
+    border-radius: var(--border-radius-1);
+    text-align: center;
+    padding: var(--card-padding);
+}
+
+aside .updates .updates__icon {
+    font-size: 2.8rem;
+}
+
+aside .updates h4 {
+    margin: 1rem 0;
+}
+
+aside .updates small {
+    display: block;
+}
+
+aside .updates a {
+    display: block;
+    width: 100%;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius-1);
+    padding: 0.8rem 0;
+    margin-top: 2rem;
+    transition: all 300ms ease;
+}
+
+aside .updates a:hover {
+    box-shadow: 0rem 0.3rem 0.5rem var(--color-primary-light);
+}
+
+/* ================= MIDDLE =============== */
+main section.middle .header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main section.middle .header input[type="date"] {
+    padding: 0.5rem 2rem;
+    border-radius: var(--border-radius-2);
+    background: var(--color-white);
+    color: var(--color-gray-dark);
+}
+
+main section.middle .cards {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+main section.middle .cards .card {
+    background: linear-gradient(#ff796f, #bd261b);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    color: white;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    box-shadow: 0 1rem 1rem var(--color-danger-light);
+    transition: all 300ms ease;
+    min-width: 22rem;
+}
+
+main section.middle .cards .card:hover {
+    box-shadow: none;
+}
+
+main section.middle .cards .card:nth-child(2) {
+    background: linear-gradient(#7f8191, #27282f);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+main section.middle .cards .card:nth-child(3) {
+    background: linear-gradient(#5d70ff, #5719c2);
+    box-shadow: 0 1rem 1rem var(--color-primary-light);
+}
+
+main section.middle .cards .card:hover {
+    box-shadow: none;
+}
+
+main section.middle .card .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section.middle .card .top .left {
+    display: flex;
+    gap: 0.5rem;
+}
+
+main section.middle .card .top .left h2 {
+    font-weight: 200;
+    font-size: 1.4rem;
+}
+
+main section.middle .card .top .left img {
+    width: 2.3rem;
+    height: 2.3rem;
+    border: 1px solid white;
+    border-radius: var(--border-radius-2);
+    padding: 0.4rem;
+}
+
+main section.middle .card .top img {
+    width: 3.5rem;
+}
+
+main section.middle .card .middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section.middle .card .middle img {
+    width: 3.5rem;
+}
+
+main section.middle .card .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.middle .card .bottom .left {
+    flex-basis: 60%;
+}
+
+/* ============= reports =========== */
+
+main .reports {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.reports .category .details .details_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.reports .category .details .details_header h5:hover {
+    cursor: pointer;
+}
+
+
+.reports .category .details .details_header span {
+    margin-left: -8px;
+}
+
+.category .details .details_body small {
+    color: var(--color-danger);
+    font-weight: 600;
+}
+
+.reports .details_body {
+    max-height: 0;
+    opacity: 0;
+    transition: all 500ms;
+}
+
+.reports .details_body.show {
+    max-height: 100vh;
+    opacity: 1;
+}
+
+/*------FAST PAYMENT----------*/
+main .fast-paymemt {
+    margin-top: 1.3rem;
+    display: flex;
+    gap: 1rem;
+    align-self: center;
+}
+
+.fast-paymemt h2 {
+    flex-basis: 5%;
+}
+
+.fast-paymemt section {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    gap: 1rem;
+}
+
+.fast-paymemt .badge {
+    background: var(--color-white);
+    border-radius: var(--border-radius-2);
+    display: flex;
+    padding: 0.8rem 1rem;
+    height: 2.5rem;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 auto 1;
+    transition: all 300ms ease;
+}
+
+.fast-paymemt .badge:hover {
+    box-shadow: 0 0 0.5rem var(--color-primary);
+    cursor: pointer;
+}
+
+.fast-paymemt .badge:first-child span {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.fast-paymemt .badge .badge-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+}
+
+.fast-paymemt .badge p {
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.fast-paymemt .badge:nth-child(3n + 0) .badge-dot {
+    background: var(--color-primary);
+}
+
+.fast-paymemt .badge:nth-child(even) .badge-dot {
+    background: var(--color-success);
+}
+
+.fast-paymemt .badge:nth-child(3n + 1) .badge-dot {
+    background: var(--color-purple);
+}
+
+.fast-paymemt .badge:nth-child(4n + 1) .badge-dot {
+    background: var(--color-danger);
+}
+
+/* ============= CANVAS ============= */
+canvas#chart {
+    background: var(--color-white);
+    max-width: 100%;
+    margin-top: 2rem;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+
+}
+
+/* =============== INVESTMENTS ==========*/
+.right .investments {
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+}
+
+.right .investments .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--card-padding);
+    padding-bottom: 0;
+}
+
+.right .investments .top .more {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.right .investments .investment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--card-padding);
+    font-weight: 500;
+    border-bottom: 1px solid var(--color-light);
+    transition: all 300ms ease;
+}
+
+.right .investments .investment:last-child {
+    border: none;
+}
+
+.right .investments .investment:hover {
+    background: var(--color-light);
+    cursor: pointer;
+}
+
+.right .investments .investment img {
+    width: 2.4rem;
+}
+
+
+.right .investments .investment .amount .price {
+    font-weight: 700;
+}
+
+/* ============== RECENT TRANSACTIONS ============= */
+.right .transactions {
+    margin-top: 2rem;
+}
+
+.right .transactions .header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--card-padding);
+}
+
+.right .transactions .header a {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.right .transactions .transaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem var(--card-padding);
+    border-radius: var(--card-border-radius);
+    transition: all 300ms ease;
+}
+
+.right .transactions .transaction:hover {
+    background: var(--color-white);
+    cursor: pointer;
+}
+
+
+.right .transactions .transaction .icon {
+    padding: var(--padding-2);
+    border-radius: var(--border-radius-1);
+    display: flex;
+    align-items: center;
+}
+
+.right .transactions .transaction .card {
+    height: 3rem;
+    width: 4.6rem;
+    border-radius: var(--border-radius-2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .transactions .transaction .card img {
+    height: fit-content;
+    width: 1.8rem;
+
+}
+
+/*================MEDIA QUERIES FOR TABLETS=============*/
+@media screen and (max-width: 1024px) {
+    nav .search-bar {
+        display: none;
+    }
+
+    nav .profile-area {
+        gap: 2rem;
+    }
+
+    nav .profile-area button#menu-btn {
+        display: inline;
+        background: transparent;
+        color: var(--color-dark);
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    main aside {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        z-index: 3;
+        width: 22rem;
+        height: 100vh;
+        background: var(--color-white);
+        box-shadow: 2rem 0 2rem var(--color-primary-light);
+        display: none;
+        animation: showSidebar 400ms ease forwards;
+    }
+
+    @keyframes showSidebar {
+        to {
+            left: 0;
+        }
+    }
+
+    main aside button#close-btn {
+        display: inline-block;
+        background: transparent;
+        z-index: 4;
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        right: 1rem;
+        top: 1rem;
+        color: var(--color-dark);
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+    main aside .sidebar {
+        margin-top: 4rem;
+    }
+
+
+    main aside .sidebar a.active::before {
+        display: none;
+    }
+
+    main aside .updates {
+        display: none;
+    }
+
+    main section.middle .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main canvas {
+        margin: 3rem 0 1rem;
+    }
+
+    main section.right .transactions {
+        margin-top: 3rem;
+    }
+}
+
+/*================MEDIA QUERIES FOR TABLETS=============*/
+@media screen and (max-width: 600px) {
+    nav .profile-area {
+        gap: 2.6rem;
+    }
+
+    nav .profile h5, nav .profile span {
+        display: none;
+    }
+
+    main section.middle .fast-paymemt {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 3rem;
+        gap: 1rem
+    }
+
+    main section.middle .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
